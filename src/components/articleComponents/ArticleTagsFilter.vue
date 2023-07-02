@@ -1,34 +1,3 @@
-<script>
-export default {
-  props: {
-    tags: {
-      type: Object,
-      required: true,
-    },
-    initialTagId: {
-      type: Number,
-      default: 2,
-    },
-  },
-  setup() {},
-  data() {
-    return {
-      selectedTag: this.initialTagId,
-    };
-  },
-  methods: {
-    tagClicked(clickedTag) {
-      if (this.selectedTag === clickedTag.id) {
-        return;
-      }
-
-      this.selectedTag = clickedTag.id;
-      this.$emit("tagSelected", clickedTag);
-    },
-  },
-};
-</script>
-
 <template>
   <div class="tags">
     <h5 class="tags__title">Tags</h5>
@@ -46,6 +15,36 @@ export default {
     </ul>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    tags: {
+      type: Object,
+      required: true,
+    },
+    initialTagId: {
+      type: Number,
+      default: 2,
+    },
+  },
+  data() {
+    return {
+      selectedTag: this.initialTagId,
+    };
+  },
+  methods: {
+    tagClicked(clickedTag) {
+      if (this.selectedTag === clickedTag.id) {
+        return;
+      }
+
+      this.selectedTag = clickedTag.id;
+      this.$emit("tagSelected", clickedTag);
+    },
+  },
+};
+</script>
 
 <style scoped>
 .tags {

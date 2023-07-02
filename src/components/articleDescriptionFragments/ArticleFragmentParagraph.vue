@@ -1,3 +1,7 @@
+<template>
+  <p class="article__paragraph">{{ content }}</p>
+</template>
+
 <script>
 export default {
   props: {
@@ -8,10 +12,6 @@ export default {
   },
 };
 </script>
-
-<template>
-  <p class="article__paragraph">{{ content }}</p>
-</template>
 
 <style scoped>
 .article__paragraph {

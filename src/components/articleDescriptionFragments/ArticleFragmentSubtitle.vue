@@ -1,3 +1,7 @@
+<template>
+  <h4 class="article__subtitle">{{ content }}</h4>
+</template>
+
 <script>
 export default {
   props: {
@@ -8,10 +12,6 @@ export default {
   },
 };
 </script>
-
-<template>
-  <h4 class="article__subtitle">{{ content }}</h4>
-</template>
 
 <style scoped>
 .article__subtitle {

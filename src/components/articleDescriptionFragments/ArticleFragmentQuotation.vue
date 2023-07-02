@@ -1,3 +1,12 @@
+<template>
+  <div class="article__quotation-block">
+    <i class="icon icon-quotation"></i>
+    <p class="article__quotation-text">
+      {{ content }}
+    </p>
+  </div>
+</template>
+
 <script>
 export default {
   props: {
@@ -8,15 +17,6 @@ export default {
   },
 };
 </script>
-
-<template>
-  <div class="article__quotation-block">
-    <i class="icon icon-quotation"></i>
-    <p class="article__quotation-text">
-      {{ content }}
-    </p>
-  </div>
-</template>
 
 <style scoped>
 .article__quotation-block {

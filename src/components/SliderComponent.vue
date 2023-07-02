@@ -1,7 +1,11 @@
 <template>
   <section class="slider wrapper">
     <div class="slider__banner">
-      <img class="slider__image" :src="image" />
+      <img
+        data-id="2"
+        class="slider__image"
+        :src="require('@/' + bannersImageDir + image)"
+      />
       <div class="slider__content">
         <h1 class="slider__title">{{ title }}</h1>
         <p class="slider__text">{{ text }}</p>
@@ -14,11 +18,14 @@
 </template>
 
 <script>
+import storeMixin from "@/mixins/storeMixin";
+
 export default {
   name: "SliderComponent",
+  mixins: [storeMixin],
   data() {
     return {
-      image: "/img/main_banner.webp",
+      image: "main_banner.webp",
       title: "Let Your Home Be Unique",
       text: "There are many variations of the passages of lorem Ipsum fromavailable, majority.",
       buttonText: "Get Started",

@@ -1,3 +1,22 @@
+<template>
+  <div class="article-in-detail">
+    <div class="articles-wrapper">
+      <transition-group>
+        <ArticleDescription
+          v-for="article in articles"
+          :key="article.id"
+          :article="article"
+        />
+      </transition-group>
+    </div>
+    <ArticleTagsFilter
+      :tags="tags"
+      :initialTagId="isAllShowing === true ? 0 : selectedTag"
+      @tagSelected="tagClickHandler"
+    />
+  </div>
+</template>
+
 <script>
 import ArticleDescription from "@/components/articleComponents/ArticleFullDescription.vue";
 import ArticleTagsFilter from "@/components/articleComponents/ArticleTagsFilter.vue";
@@ -66,25 +85,6 @@ export default {
   },
 };
 </script>
-
-<template>
-  <div class="article-in-detail">
-    <div class="articles-wrapper">
-      <transition-group>
-        <ArticleDescription
-          v-for="article in articles"
-          :key="article.id"
-          :article="article"
-        />
-      </transition-group>
-    </div>
-    <ArticleTagsFilter
-      :tags="tags"
-      :initialTagId="isAllShowing === true ? 0 : selectedTag"
-      @tagSelected="tagClickHandler"
-    />
-  </div>
-</template>
 
 <style scoped>
 .article-in-detail {

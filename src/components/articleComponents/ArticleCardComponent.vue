@@ -1,15 +1,19 @@
 <template>
   <transition appear>
     <article class="article">
-      <a :href="'/article/' + article.id" class="article__image-block">
-        <img :alt="article.alt" :src="article.imgSrc" class="article__image" />
+      <router-link :to="'/article/' + article.id" class="article__image-block">
+        <img
+          :alt="article.alt"
+          :src="require('@/' + articlesImageDir + article.imgSrc)"
+          class="article__image"
+        />
         <div class="article__image-description">
           {{ article.imgDescription }}
         </div>
-      </a>
-      <a :href="'/article/' + article.id" class="article__title">{{
+      </router-link>
+      <router-link :to="'/article/' + article.id" class="article__title">{{
         article.title
-      }}</a>
+      }}</router-link>
       <div class="article__footer">
         <DateTime :date-time="article.date" />
         <CircleButton type="link" :link="'/article/' + article.id" />
@@ -19,8 +23,11 @@
 </template>
 
 <script>
+import storeMixin from "@/mixins/storeMixin";
+
 export default {
   name: "ArticleCardComponent",
+  mixins: [storeMixin],
   props: {
     article: {
       url: {

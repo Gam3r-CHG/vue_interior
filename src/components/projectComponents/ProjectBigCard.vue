@@ -4,7 +4,7 @@
       <img
         :alt="project.alt"
         class="project-card__image"
-        :src="project.image"
+        :src="require('@/' + projectsImageDir + project.image)"
       />
     </a>
     <div class="project-card__footer">
@@ -30,8 +30,11 @@
 </template>
 
 <script>
+import storeMixin from "@/mixins/storeMixin";
+
 export default {
   name: "ProjectBigCard",
+  mixins: [storeMixin],
   props: {
     project: {
       id: {

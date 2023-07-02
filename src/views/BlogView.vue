@@ -1,9 +1,6 @@
 <template>
   <main class="main">
-    <TopPageComponent
-      image="/img/articles_banner.webp"
-      title="Articles & News"
-    />
+    <TopPageComponent image="articles_banner.webp" title="Articles & News" />
     <LatestPostComponent />
     <ArticlesComponent :page="1" :articlesPerPage="6" :showText="false" />
   </main>

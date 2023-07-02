@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import HomeView from "@/views/HomeView.vue";
 
 const routes = [
   {
@@ -14,7 +14,7 @@ const routes = [
     // this generates a separate chunk (blog.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "blog" */ "../views/ProjectView.vue"),
+      import(/* webpackChunkName: "blog" */ "@/views/ProjectView.vue"),
   },
   {
     path: "/blog",
@@ -23,7 +23,7 @@ const routes = [
     // this generates a separate chunk (blog.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "blog" */ "../views/BlogView.vue"),
+      import(/* webpackChunkName: "blog" */ "@/views/BlogView.vue"),
   },
   {
     path: "/article/:articleId?",
@@ -32,7 +32,7 @@ const routes = [
     // this generates a separate chunk (blog.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "blog" */ "../views/ArticleView.vue"),
+      import(/* webpackChunkName: "blog" */ "@/views/ArticleView.vue"),
   },
 ];
 

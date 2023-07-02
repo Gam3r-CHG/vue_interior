@@ -1,7 +1,10 @@
 <template>
   <div class="post__content">
     <div class="post__image">
-      <img :alt="post.imgAlt" :src="post.imgSrc" />
+      <img
+        :alt="post.imgAlt"
+        :src="require('@/' + articlesImageDir + post.imgSrc)"
+      />
     </div>
     <div class="post__text-block">
       <h3 class="post__post-title">
@@ -23,8 +26,11 @@
 </template>
 
 <script>
+import storeMixin from "@/mixins/storeMixin";
+
 export default {
   name: "LatestPostContent",
+  mixins: [storeMixin],
   props: {
     post: {
       id: {

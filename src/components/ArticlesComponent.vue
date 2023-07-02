@@ -28,6 +28,11 @@ import PaginationComponent from "@/components/PaginationComponent.vue";
 
 export default {
   name: "ArticlesComponent",
+  components: {
+    ArticleTitleComponent,
+    ArticleComponent,
+    PaginationComponent,
+  },
   props: {
     title: {
       type: String,
@@ -68,15 +73,13 @@ export default {
       };
     }
     const countPages = Math.ceil(countArticles / props.articlesPerPage);
-    const articles = ref(
-      getArticles(
-        props.articlesPerPage,
-        (props.initialPage - 1) * props.articlesPerPage
-      )
+    const fetchedArticles = getArticles(
+      props.articlesPerPage,
+      (props.initialPage - 1) * props.articlesPerPage
     );
 
     return {
-      articles,
+      articles: ref(fetchedArticles),
       countArticles,
       countPages,
     };
@@ -98,11 +101,6 @@ export default {
     updateArticles() {
       this.articles = getArticles(this.articlesPerPage, this.getCurrentOffset);
     },
-  },
-  components: {
-    ArticleTitleComponent,
-    ArticleComponent,
-    PaginationComponent,
   },
 };
 </script>

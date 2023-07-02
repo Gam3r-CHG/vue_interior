@@ -1,14 +1,3 @@
-<script>
-export default {
-  props: {
-    content: {
-      type: Array,
-      required: true,
-    },
-  },
-};
-</script>
-
 <template>
   <ul class="article__number-list">
     <li
@@ -21,6 +10,17 @@ export default {
     </li>
   </ul>
 </template>
+
+<script>
+export default {
+  props: {
+    content: {
+      type: Array,
+      required: true,
+    },
+  },
+};
+</script>
 
 <style scoped>
 .article__number-list {

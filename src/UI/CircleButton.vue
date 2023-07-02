@@ -1,3 +1,29 @@
+<template>
+  <button
+    v-if="type === 'button'"
+    class="project-card__link-arrow link-arrow"
+    :class="{
+      'link-arrow--big': size === 'big',
+      'link-arrow--reverse': reverse,
+      'link-arrow--disabled': disabled,
+    }"
+    :disabled="disabled"
+  >
+    <i v-if="!text" class="icon icon-arrow"></i>{{ text }}
+  </button>
+  <router-link
+    v-else
+    class="project-card__link-arrow link-arrow"
+    :class="{
+      'link-arrow--big': size === 'big',
+      'link-arrow--reverse': reverse,
+    }"
+    :to="link"
+  >
+    <i v-if="!text" class="icon icon-arrow"></i>{{ text }}
+  </router-link>
+</template>
+
 <script setup>
 import { defineProps } from "vue";
 defineProps({
@@ -36,32 +62,6 @@ defineProps({
   },
 });
 </script>
-
-<template>
-  <button
-    v-if="this.$props.type === 'button'"
-    class="project-card__link-arrow link-arrow"
-    :class="{
-      'link-arrow--big': size === 'big',
-      'link-arrow--reverse': reverse,
-      'link-arrow--disabled': disabled,
-    }"
-    :disabled="disabled"
-  >
-    <i v-if="!text" class="icon icon-arrow"></i>{{ text }}
-  </button>
-  <a
-    v-else
-    class="project-card__link-arrow link-arrow"
-    :class="{
-      'link-arrow--big': size === 'big',
-      'link-arrow--reverse': reverse,
-    }"
-    :href="link"
-  >
-    <i v-if="!text" class="icon icon-arrow"></i>{{ text }}
-  </a>
-</template>
 
 <style scoped>
 .link-arrow {

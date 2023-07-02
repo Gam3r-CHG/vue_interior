@@ -1,5 +1,3 @@
-"use strict";
-
 export function getAllArticles() {
   return articles;
 }
@@ -28,7 +26,7 @@ const articles = [
   {
     id: 1,
     title: "Let’s Get Solution For Building Construction Work",
-    imgSrc: "/img/article1.webp",
+    imgSrc: "article1.webp",
     imgAlt: "image description",
     imgDescription: "Kitchan Design",
     url: "#",
@@ -62,7 +60,7 @@ const articles = [
       },
       {
         type: "Image",
-        content: { src: "/img/article6.webp", alt: "", imageTitle: "" },
+        content: { src: "article6.webp", alt: "", imageTitle: "" },
       },
       {
         type: "Paragraph",
@@ -74,7 +72,7 @@ const articles = [
   {
     id: 2,
     title: "Low Cost Latest Invented Interior Designing Ideas.",
-    imgSrc: "/img/article2.webp",
+    imgSrc: "article2.webp",
     imgAlt: "image description",
     imgDescription: "Living Design",
     url: "#",
@@ -92,7 +90,7 @@ const articles = [
   {
     id: 3,
     title: "Best For Any Office & Business Interior Solution",
-    imgSrc: "/img/article3.webp",
+    imgSrc: "article3.webp",
     imgAlt: "image description",
     imgDescription: "Interior Design",
     url: "#",
@@ -112,14 +110,14 @@ const articles = [
       },
       {
         type: "Image",
-        content: { src: "/img/article6.webp", alt: "", imageTitle: "" },
+        content: { src: "article6.webp", alt: "", imageTitle: "" },
       },
     ],
   },
   {
     id: 4,
     title: "Let’s Get Solution For Building Construction Work",
-    imgSrc: "/img/article4.webp",
+    imgSrc: "article4.webp",
     imgAlt: "image description",
     imgDescription: "Kitchan Design",
     url: "#",
@@ -142,7 +140,7 @@ const articles = [
   {
     id: 5,
     title: "Let’s Get Solution For Building Construction Work",
-    imgSrc: "/img/article5.webp",
+    imgSrc: "article5.webp",
     imgAlt: "image description",
     imgDescription: "Kitchan Design",
     url: "#",
@@ -165,7 +163,7 @@ const articles = [
   {
     id: 6,
     title: "Let’s Get Solution For Building Construction Work",
-    imgSrc: "/img/article6.webp",
+    imgSrc: "article6.webp",
     imgAlt: "image description",
     imgDescription: "Kitchan Design",
     url: "#",
@@ -207,14 +205,14 @@ const articles = [
       },
       {
         type: "Image",
-        content: { src: "/img/article6.webp", alt: "", imageTitle: "" },
+        content: { src: "article6.webp", alt: "", imageTitle: "" },
       },
     ],
   },
   {
     id: 7,
     title: "Let’s Get Solution For Building Construction Work",
-    imgSrc: "/img/article7.webp",
+    imgSrc: "article7.webp",
     imgAlt: "image description",
     imgDescription: "Kitchan Design",
     url: "#",
@@ -243,7 +241,7 @@ const articles = [
       },
       {
         type: "Image",
-        content: { src: "/img/article6.webp", alt: "", imageTitle: "" },
+        content: { src: "article6.webp", alt: "", imageTitle: "" },
       },
       {
         type: "Paragraph",
@@ -255,7 +253,7 @@ const articles = [
   {
     id: 8,
     title: "Low Cost Latest Invented Interior Designing Ideas.",
-    imgSrc: "/img/article1.webp",
+    imgSrc: "article1.webp",
     imgAlt: "image description",
     imgDescription: "Living Design",
     url: "#",
@@ -293,7 +291,7 @@ const articles = [
       },
       {
         type: "Image",
-        content: { src: "/img/article6.webp", alt: "", imageTitle: "" },
+        content: { src: "article6.webp", alt: "", imageTitle: "" },
       },
       {
         type: "Paragraph",
@@ -305,7 +303,7 @@ const articles = [
   {
     id: 9,
     title: "Best For Any Office & Business Interior Solution",
-    imgSrc: "/img/article2.webp",
+    imgSrc: "article2.webp",
     imgAlt: "image description",
     imgDescription: "Interior Design",
     url: "#",
@@ -339,7 +337,7 @@ const articles = [
       },
       {
         type: "Image",
-        content: { src: "/img/article6.webp", alt: "", imageTitle: "" },
+        content: { src: "article6.webp", alt: "", imageTitle: "" },
       },
       {
         type: "Paragraph",
@@ -351,7 +349,7 @@ const articles = [
   {
     id: 10,
     title: "Let’s Get Solution For Building Construction Work",
-    imgSrc: "/img/article3.webp",
+    imgSrc: "article3.webp",
     imgAlt: "image description",
     imgDescription: "Kitchan Design",
     url: "#",
@@ -398,7 +396,7 @@ const articles = [
   {
     id: 11,
     title: "Let’s Get Solution For Building Construction Work",
-    imgSrc: "/img/article4.webp",
+    imgSrc: "article4.webp",
     imgAlt: "image description",
     imgDescription: "Kitchan Design",
     url: "#",
@@ -435,7 +433,7 @@ const articles = [
   {
     id: 12,
     title: "Let’s Get Solution For Building Construction Work",
-    imgSrc: "/img/article5.webp",
+    imgSrc: "article5.webp",
     imgAlt: "image description",
     imgDescription: "Kitchan Design",
     url: "#",
@@ -464,7 +462,7 @@ const articles = [
       },
       {
         type: "Image",
-        content: { src: "/img/article6.webp", alt: "", imageTitle: "" },
+        content: { src: "article6.webp", alt: "", imageTitle: "" },
       },
       {
         type: "Paragraph",
@@ -476,7 +474,7 @@ const articles = [
   {
     id: 13,
     title: "Let’s Get Solution For Building Construction Work",
-    imgSrc: "/img/article6.webp",
+    imgSrc: "article6.webp",
     imgAlt: "image description",
     imgDescription: "Kitchan Design",
     url: "#",
@@ -502,7 +500,7 @@ const articles = [
       },
       {
         type: "Image",
-        content: { src: "/img/article6.webp", alt: "", imageTitle: "" },
+        content: { src: "article6.webp", alt: "", imageTitle: "" },
       },
       {
         type: "Paragraph",
@@ -514,7 +512,7 @@ const articles = [
   {
     id: 14,
     title: "Low Cost Latest Invented Interior Designing Ideas.",
-    imgSrc: "/img/article7.webp",
+    imgSrc: "article7.webp",
     imgAlt: "image description",
     imgDescription: "Living Design",
     url: "#",
@@ -548,7 +546,7 @@ const articles = [
       },
       {
         type: "Image",
-        content: { src: "/img/article6.webp", alt: "", imageTitle: "" },
+        content: { src: "article6.webp", alt: "", imageTitle: "" },
       },
       {
         type: "Paragraph",
@@ -560,7 +558,7 @@ const articles = [
   {
     id: 15,
     title: "Let’s Get Solution For Building Construction Work",
-    imgSrc: "/img/article16_big.webp",
+    imgSrc: "article16_big.webp",
     imgAlt: "image description",
     imgDescription: "Kitchan Design",
     url: "#",
@@ -596,7 +594,7 @@ const articles = [
       {
         type: "Image",
         content: {
-          src: "/img/article17_big.webp",
+          src: "article17_big.webp",
           alt: "",
           imageTitle: "",
         },
@@ -611,7 +609,7 @@ const articles = [
   {
     id: 16,
     title: "Let’s Get Solution For Building Construction Work",
-    imgSrc: "/img/article17_big.webp",
+    imgSrc: "article17_big.webp",
     imgAlt: "image description",
     imgDescription: "Kitchan Design",
     url: "#",
@@ -654,7 +652,7 @@ const articles = [
       },
       {
         type: "Image",
-        content: { src: "/img/article16_big.webp", alt: "", imageTitle: "" },
+        content: { src: "article16_big.webp", alt: "", imageTitle: "" },
       },
       {
         type: "Paragraph",
@@ -664,7 +662,7 @@ const articles = [
       {
         id: 17,
         title: "Low Cost Latest Invented Interior Designing Ideas",
-        imgSrc: "/img/article7-big.webp",
+        imgSrc: "article7-big.webp",
         imgAlt: "image description",
         imgDescription: "Interior Design",
         url: "#",
@@ -694,7 +692,7 @@ const articles = [
   {
     id: 17,
     title: "Low Cost Latest Invented Interior Designing Ideas",
-    imgSrc: "/img/article7_big.webp",
+    imgSrc: "article7_big.webp",
     imgAlt: "image description",
     imgDescription: "Interior Design",
     url: "#",

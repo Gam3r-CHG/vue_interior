@@ -1,5 +1,16 @@
+<template>
+  <img
+    class="article__image"
+    :src="require('@/' + articlesImageDir + content.src)"
+    :alt="content.alt"
+  />
+</template>
+
 <script>
+import storeMixin from "@/mixins/storeMixin";
+
 export default {
+  mixins: [storeMixin],
   props: {
     content: {
       src: {
@@ -14,10 +25,6 @@ export default {
   },
 };
 </script>
-
-<template>
-  <img class="article__image" :src="content.src" :alt="content.alt" />
-</template>
 
 <style scoped>
 .article__image {

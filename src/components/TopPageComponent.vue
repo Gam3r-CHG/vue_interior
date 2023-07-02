@@ -1,6 +1,10 @@
 <template>
   <section class="top">
-    <img alt="top-image" class="top__image" :src="image" />
+    <img
+      alt="top-image"
+      class="top__image"
+      :src="require('@/' + bannersImageDir + image)"
+    />
     <div v-if="title" class="top__text-block">
       <h1 class="top__title">{{ title }}</h1>
       <ul class="top__breadcrumbs">
@@ -16,8 +20,11 @@
 </template>
 
 <script>
+import storeMixin from "@/mixins/storeMixin";
+
 export default {
   name: "TopPageComponent",
+  mixins: [storeMixin],
   props: {
     image: {
       type: String,

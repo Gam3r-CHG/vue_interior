@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-    <TopPageComponent image="/img/article_banner.webp" />
+    <TopPageComponent image="article_banner.webp" />
     <ArticleInDetail class="wrapper"></ArticleInDetail>
   </main>
 </template>

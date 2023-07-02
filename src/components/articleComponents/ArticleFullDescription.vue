@@ -1,27 +1,3 @@
-<script>
-import ArticleFragmentParagraph from "@/components/articleDescriptionFragments/ArticleFragmentParagraph.vue";
-import ArticleFragmentImage from "@/components/articleDescriptionFragments/ArticleFragmentImage.vue";
-import ArticleFragmentNumberList from "@/components/articleDescriptionFragments/ArticleFragmentNumberList.vue";
-import ArticleFragmentSubtitle from "@/components/articleDescriptionFragments/ArticleFragmentSubtitle.vue";
-import ArticleFragmentQuotation from "@/components/articleDescriptionFragments/ArticleFragmentQuotation.vue";
-
-export default {
-  components: {
-    ArticleFragmentQuotation,
-    ArticleFragmentSubtitle,
-    ArticleFragmentNumberList,
-    ArticleFragmentImage,
-    ArticleFragmentParagraph,
-  },
-  props: {
-    article: {
-      type: Object,
-      required: true,
-    },
-  },
-};
-</script>
-
 <template>
   <article class="article">
     <h4 class="article__title">
@@ -29,7 +5,7 @@ export default {
     </h4>
     <img
       class="article__top-image"
-      :src="article.imgSrc"
+      :src="require('@/' + articlesImageDir + article.imgSrc)"
       :alt="article.imgAlt"
     />
     <div class="article__top">
@@ -55,6 +31,32 @@ export default {
     <div class="article__bottom-line"></div>
   </article>
 </template>
+
+<script>
+import ArticleFragmentParagraph from "@/components/articleDescriptionFragments/ArticleFragmentParagraph.vue";
+import ArticleFragmentImage from "@/components/articleDescriptionFragments/ArticleFragmentImage.vue";
+import ArticleFragmentNumberList from "@/components/articleDescriptionFragments/ArticleFragmentNumberList.vue";
+import ArticleFragmentSubtitle from "@/components/articleDescriptionFragments/ArticleFragmentSubtitle.vue";
+import ArticleFragmentQuotation from "@/components/articleDescriptionFragments/ArticleFragmentQuotation.vue";
+import storeMixin from "@/mixins/storeMixin";
+
+export default {
+  components: {
+    ArticleFragmentQuotation,
+    ArticleFragmentSubtitle,
+    ArticleFragmentNumberList,
+    ArticleFragmentImage,
+    ArticleFragmentParagraph,
+  },
+  mixins: [storeMixin],
+  props: {
+    article: {
+      type: Object,
+      required: true,
+    },
+  },
+};
+</script>
 
 <style scoped>
 .article {

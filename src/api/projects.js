@@ -13,7 +13,7 @@ export function getCountProjects() {
 const projects = [
   {
     id: 1,
-    image: "/img/project1_big.webp",
+    image: "project1_big.webp",
     alt: "project image description",
     title: "Modern Kitchen",
     tags: [
@@ -30,7 +30,7 @@ const projects = [
   },
   {
     id: 2,
-    image: "/img/project2_big.webp",
+    image: "project2_big.webp",
     alt: "project image description",
     title: "Modern Kitchen",
     tags: [
@@ -47,7 +47,7 @@ const projects = [
   },
   {
     id: 3,
-    image: "/img/project3_big.webp",
+    image: "project3_big.webp",
     alt: "project image description",
     title: "Modern Kitchen",
     tags: [
@@ -64,7 +64,7 @@ const projects = [
   },
   {
     id: 4,
-    image: "/img/project4_big.webp",
+    image: "project4_big.webp",
     alt: "project image description",
     title: "Modern Kitchen",
     tags: [

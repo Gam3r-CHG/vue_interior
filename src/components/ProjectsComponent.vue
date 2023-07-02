@@ -21,7 +21,6 @@ import { ref } from "vue";
 export default {
   name: "ProjectsComponent",
   components: { ProjectComponent },
-  props: {},
   data() {
     return {
       title: "Follow Our Projects",
