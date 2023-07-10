@@ -1,30 +1,30 @@
 <template>
-  <section v-if="countArticles" class="articles wrapper">
+  <section v-if="getCountArticles" class="articles wrapper">
     <ArticleTitleComponent :title="title" :text="showText ? text : ''" />
 
     <div class="articles__wrapper">
       <ArticleComponent
-        v-for="article in articles"
+        v-for="article in currentArticles"
         :key="article.id"
         :article="article"
       ></ArticleComponent>
     </div>
 
     <PaginationComponent
-      v-if="pagination && countArticles > articlesPerPage"
+      v-if="pagination && getCountArticles > articlesPerPage"
       :numberOfPages="countPages"
-      :initialPage="initialPage"
+      :initialPage="currentPage"
       @pageChanged="paginationClickHandler"
     ></PaginationComponent>
   </section>
 </template>
 
 <script>
-import { getArticles, getCountArticles } from "@/api/articles";
-import { ref } from "vue";
 import ArticleTitleComponent from "@/components/articleComponents/ArticlesTitleComponent.vue";
 import ArticleComponent from "@/components/articleComponents/ArticleCardComponent.vue";
 import PaginationComponent from "@/components/PaginationComponent.vue";
+import articlesMixin from "@/mixins/articlesMixin";
+import { ref } from "vue";
 
 export default {
   name: "ArticlesComponent",
@@ -33,6 +33,7 @@ export default {
     ArticleComponent,
     PaginationComponent,
   },
+  mixins: [articlesMixin],
   props: {
     title: {
       type: String,
@@ -41,7 +42,7 @@ export default {
     text: {
       type: String,
       default:
-        "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using.",
+        "It is a long established fact that a reader will be distracted by the of readable content of a initialPage when lookings at its layouts the points of using.",
     },
     showText: {
       type: Boolean,
@@ -60,34 +61,53 @@ export default {
       default: 6,
     },
   },
-  data() {
-    return {
-      currentPage: 0,
-    };
-  },
-  setup(props) {
-    const countArticles = getCountArticles();
-    if (!countArticles) {
-      return {
-        countArticles: 0,
-      };
-    }
-    const countPages = Math.ceil(countArticles / props.articlesPerPage);
-    const fetchedArticles = getArticles(
-      props.articlesPerPage,
-      (props.initialPage - 1) * props.articlesPerPage
-    );
-
-    return {
-      articles: ref(fetchedArticles),
-      countArticles,
-      countPages,
-    };
-  },
   computed: {
+    currentArticles() {
+      return this.getArticles(this.articlesPerPage, this.getCurrentOffset);
+    },
     getCurrentOffset() {
       return (this.currentPage - 1) * this.articlesPerPage;
     },
+    countPages() {
+      return Math.ceil(this.getCountArticles / this.articlesPerPage);
+    },
+    getCurrentRoutePage() {
+      const routePageNumber = +this.$route.params.pageNumber;
+      if (isNaN(routePageNumber) || routePageNumber === 0) {
+        return 1;
+      }
+
+      if (routePageNumber > this.countPages) {
+        return this.countPages;
+      }
+
+      return routePageNumber;
+    },
+  },
+  data() {
+    return {
+      currentPage: ref(this.initialPage),
+    };
+  },
+  created() {
+    if (this.currentPage <= 0) {
+      this.currentPage = 1;
+    }
+
+    if (this.currentPage > this.countPages) {
+      this.currentPage = this.countPages;
+      this.$router.push(`/blog/${this.currentPage}`);
+    }
+
+    this.$watch(
+      () => this.$route.params.pageNumber,
+      (toParams, previousParams) => {
+        console.log(
+          `Changing route from ${previousParams} to ${this.getCurrentRoutePage}`
+        );
+        this.currentPage = this.getCurrentRoutePage;
+      }
+    );
   },
   methods: {
     paginationClickHandler(selectedPageNumber) {
@@ -95,11 +115,7 @@ export default {
         return;
       }
 
-      this.currentPage = selectedPageNumber;
-      this.updateArticles();
-    },
-    updateArticles() {
-      this.articles = getArticles(this.articlesPerPage, this.getCurrentOffset);
+      this.$router.push(`/blog/${selectedPageNumber}`);
     },
   },
 };

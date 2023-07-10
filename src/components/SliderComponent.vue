@@ -18,11 +18,11 @@
 </template>
 
 <script>
-import storeMixin from "@/mixins/storeMixin";
+import pathsMixin from "@/mixins/pathsMixin";
 
 export default {
   name: "SliderComponent",
-  mixins: [storeMixin],
+  mixins: [pathsMixin],
   data() {
     return {
       image: "main_banner.webp",

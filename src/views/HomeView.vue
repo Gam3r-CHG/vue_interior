@@ -13,7 +13,7 @@
 
 <script>
 import SliderComponent from "@/components/SliderComponent.vue";
-import ProjectsComponent from "@/components/ProjectsComponent.vue";
+import ProjectsComponent from "@/components/Random4Projects.vue";
 import NumbersComponent from "@/components/NumbersComponent.vue";
 import ArticlesComponent from "@/components/ArticlesComponent.vue";
 

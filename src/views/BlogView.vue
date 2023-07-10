@@ -2,7 +2,11 @@
   <main class="main">
     <TopPageComponent image="articles_banner.webp" title="Articles & News" />
     <LatestPostComponent />
-    <ArticlesComponent :page="1" :articlesPerPage="6" :showText="false" />
+    <ArticlesComponent
+      :initialPage="initialPage"
+      :articlesPerPage="6"
+      :showText="false"
+    />
   </main>
 </template>
 
@@ -17,6 +21,19 @@ export default {
     TopPageComponent,
     LatestPostComponent,
     ArticlesComponent,
+  },
+  data() {
+    return {
+      currentPage: 1,
+    };
+  },
+  computed: {
+    initialPage() {
+      const routePageNumber = +this.$route.params.pageNumber;
+      return isNaN(routePageNumber) || routePageNumber === 0
+        ? 1
+        : routePageNumber;
+    },
   },
 };
 </script>

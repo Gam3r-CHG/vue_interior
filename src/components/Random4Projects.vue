@@ -5,8 +5,8 @@
       <p class="projects__sub-title">{{ text }}</p>
     </div>
     <div class="projects__cards">
-      <ProjectComponent
-        v-for="project in projects"
+      <ProjectBigCard
+        v-for="project in getFourRandomProject"
         :key="project.id"
         :project="project"
       />
@@ -15,21 +15,16 @@
 </template>
 
 <script>
-import ProjectComponent from "@/components/projectComponents/ProjectBigCard.vue";
-import { getAllProjects } from "@/api/projects";
-import { ref } from "vue";
+import ProjectBigCard from "@/components/projectComponents/ProjectBigCard.vue";
+import projectsMixin from "@/mixins/projectsMixin";
+
 export default {
-  name: "ProjectsComponent",
-  components: { ProjectComponent },
+  components: { ProjectBigCard },
+  mixins: [projectsMixin],
   data() {
     return {
       title: "Follow Our Projects",
-      text: "It is a long established fact that a reader will be distracted by the of readable content of page lookings at its layouts points.",
-    };
-  },
-  setup() {
-    return {
-      projects: ref(getAllProjects()),
+      text: "It is a long established fact that a reader will be distracted by the of readable content of initialPage lookings at its layouts points.",
     };
   },
 };

@@ -26,11 +26,11 @@
 </template>
 
 <script>
-import storeMixin from "@/mixins/storeMixin";
+import pathsMixin from "@/mixins/pathsMixin";
 
 export default {
   name: "LatestPostContent",
-  mixins: [storeMixin],
+  mixins: [pathsMixin],
   props: {
     post: {
       id: {

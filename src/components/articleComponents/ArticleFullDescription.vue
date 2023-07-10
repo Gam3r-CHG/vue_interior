@@ -38,7 +38,7 @@ import ArticleFragmentImage from "@/components/articleDescriptionFragments/Artic
 import ArticleFragmentNumberList from "@/components/articleDescriptionFragments/ArticleFragmentNumberList.vue";
 import ArticleFragmentSubtitle from "@/components/articleDescriptionFragments/ArticleFragmentSubtitle.vue";
 import ArticleFragmentQuotation from "@/components/articleDescriptionFragments/ArticleFragmentQuotation.vue";
-import storeMixin from "@/mixins/storeMixin";
+import pathsMixin from "@/mixins/pathsMixin";
 
 export default {
   components: {
@@ -48,7 +48,7 @@ export default {
     ArticleFragmentImage,
     ArticleFragmentParagraph,
   },
-  mixins: [storeMixin],
+  mixins: [pathsMixin],
   props: {
     article: {
       type: Object,

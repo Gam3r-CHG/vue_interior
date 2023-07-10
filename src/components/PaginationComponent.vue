@@ -9,15 +9,11 @@
           @click.prevent="prevPage"
         ></CircleButton>
       </li>
-      <li
-        v-for="pageNumber in numberOfPages"
-        :key="pageNumber"
-        class="pagination__item"
-        :class="{ 'pagination__item--selected': pageNumber === currentPage }"
-      >
+      <li v-for="pageNumber in numberOfPages" :key="pageNumber">
         <CircleButton
           @click.prevent="this.currentPage = pageNumber"
           :text="numberFormat(pageNumber)"
+          :selected="pageNumber === currentPage"
         ></CircleButton>
       </li>
       <li class="pagination__item">
@@ -67,7 +63,8 @@ export default {
     },
   },
   watch: {
-    currentPage: function () {
+    currentPage: function (to, from) {
+      console.log(`Pagination change from ${from} to ${to}`);
       this.$emit("pageChanged", this.currentPage);
     },
   },
@@ -82,16 +79,8 @@ export default {
   gap: 20px;
   justify-content: center;
   align-items: center;
-}
-
-.pagination__item {
   font-weight: 500;
   font-size: 16px;
   color: #292f36;
-}
-
-.pagination__item:not(.pagination__item--selected) .link-arrow {
-  background-color: white;
-  box-shadow: 0 0 0 1px var(--brown);
 }
 </style>

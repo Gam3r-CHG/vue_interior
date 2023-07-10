@@ -23,11 +23,11 @@
 </template>
 
 <script>
-import storeMixin from "@/mixins/storeMixin";
+import pathsMixin from "@/mixins/pathsMixin";
 
 export default {
   name: "ArticleCardComponent",
-  mixins: [storeMixin],
+  mixins: [pathsMixin],
   props: {
     article: {
       url: {

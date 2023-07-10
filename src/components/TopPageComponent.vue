@@ -20,11 +20,11 @@
 </template>
 
 <script>
-import storeMixin from "@/mixins/storeMixin";
+import pathsMixin from "@/mixins/pathsMixin";
 
 export default {
   name: "TopPageComponent",
-  mixins: [storeMixin],
+  mixins: [pathsMixin],
   props: {
     image: {
       type: String,

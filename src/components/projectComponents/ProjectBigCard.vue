@@ -30,11 +30,11 @@
 </template>
 
 <script>
-import storeMixin from "@/mixins/storeMixin";
+import pathsMixin from "@/mixins/pathsMixin";
 
 export default {
   name: "ProjectBigCard",
-  mixins: [storeMixin],
+  mixins: [pathsMixin],
   props: {
     project: {
       id: {

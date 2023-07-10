@@ -7,7 +7,7 @@
 
 <script>
 import TopPageComponent from "@/components/TopPageComponent.vue";
-import ProjectsComponent from "@/components/ProjectsComponent.vue";
+import ProjectsComponent from "@/components/Random4Projects.vue";
 
 export default {
   name: "HomeView",

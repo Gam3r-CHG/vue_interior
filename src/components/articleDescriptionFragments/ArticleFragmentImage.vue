@@ -7,10 +7,10 @@
 </template>
 
 <script>
-import storeMixin from "@/mixins/storeMixin";
+import pathsMixin from "@/mixins/pathsMixin";
 
 export default {
-  mixins: [storeMixin],
+  mixins: [pathsMixin],
   props: {
     content: {
       src: {

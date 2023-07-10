@@ -3,7 +3,7 @@
     <div class="articles-wrapper">
       <transition-group>
         <ArticleDescription
-          v-for="article in articles"
+          v-for="article in currentArticles"
           :key="article.id"
           :article="article"
         />
@@ -20,17 +20,17 @@
 <script>
 import ArticleDescription from "@/components/articleComponents/ArticleFullDescription.vue";
 import ArticleTagsFilter from "@/components/articleComponents/ArticleTagsFilter.vue";
-import { getAllArticles, getArticlesWithTag } from "@/api/articles";
-import { ref } from "vue";
-import { getAllTags } from "@/api/tags";
-import { useRoute } from "vue-router";
+import articlesMixin from "@/mixins/articlesMixin";
+import tagsMixin from "@/mixins/tagsMixin";
 
 export default {
+  mixins: [articlesMixin, tagsMixin],
   data() {
     return {
       selectedTag: this.initialTagId,
-      selectedTagName: "",
-      isAllShowing: this.initialIsAllShowing,
+      selectedTagName: "Bedroom",
+      isAllShowing: false,
+      currentArticleId: 1,
     };
   },
   components: {
@@ -41,47 +41,28 @@ export default {
     tagClickHandler(selectedTag) {
       this.selectedTag = selectedTag.id;
       this.selectedTagName = selectedTag.name;
-      this.articles = getArticlesWithTag(this.selectedTagName);
       this.isAllShowing = false;
     },
   },
-  setup() {
-    const allTags = getAllTags();
-    let firstSelectedTagId = 1;
-    let firstSelectedTagName = allTags[0].name;
+  computed: {
+    currentArticles() {
+      return this.isAllShowing
+        ? this.getAllArticlesWithFirstArticleByIndex(this.currentArticleId)
+        : this.getArticlesWithTag(this.selectedTagName);
+    },
+  },
+  created() {
+    const routeArticleId = +this.$route.params.articleId;
 
-    const route = useRoute();
-    const articleId = +route.params.articleId;
-
-    let initialIsAllShowing = false;
-
-    let allArticles = [];
-
-    if (articleId === 0 || isNaN(articleId)) {
-      allArticles = getArticlesWithTag(firstSelectedTagName);
-    } else {
-      allArticles = getAllArticles();
-      const indexOfSelectedArticle = allArticles.findIndex(
-        (article) => article.id === articleId
-      );
-      const selectedArticle = allArticles[indexOfSelectedArticle];
-      allArticles.splice(indexOfSelectedArticle, 1);
-      allArticles.unshift(selectedArticle);
-      const firstTagInSelectedArticle = selectedArticle.tags[0];
-
-      firstSelectedTagId = allTags.find(
-        (tag) => tag.name === firstTagInSelectedArticle
-      ).id;
-
-      initialIsAllShowing = true;
+    if (routeArticleId) {
+      if (routeArticleId > this.getCountArticles) {
+        this.currentArticleId = this.getCountArticles;
+        this.$router.push(`/article/${this.currentArticleId}`);
+      } else {
+        this.currentArticleId = routeArticleId;
+      }
+      this.isAllShowing = true;
     }
-
-    return {
-      articles: ref(allArticles),
-      tags: ref(allTags),
-      initialTagId: ref(firstSelectedTagId),
-      initialIsAllShowing: ref(initialIsAllShowing),
-    };
   },
 };
 </script>

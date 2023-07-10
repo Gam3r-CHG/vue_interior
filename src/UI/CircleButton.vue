@@ -6,6 +6,7 @@
       'link-arrow--big': size === 'big',
       'link-arrow--reverse': reverse,
       'link-arrow--disabled': disabled,
+      'link-arrow--selected': selected,
     }"
     :disabled="disabled"
   >
@@ -17,6 +18,7 @@
     :class="{
       'link-arrow--big': size === 'big',
       'link-arrow--reverse': reverse,
+      'link-arrow--selected': selected,
     }"
     :to="link"
   >
@@ -25,7 +27,6 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
 defineProps({
   size: {
     type: String,
@@ -67,19 +68,26 @@ defineProps({
 .link-arrow {
   width: 52px;
   height: 52px;
-  background: var(--lightGrey);
+  background-color: white;
+  box-shadow: 0 0 0 1px var(--brown);
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
   border: unset;
+  cursor: default;
 }
 
-.link-arrow:hover,
-.link-arrow:focus {
-  background-color: white;
-  box-shadow: 0 0 0 1px var(--brown);
+@media (hover: hover) and (pointer: fine) {
+  .link-arrow:not(.link-arrow--disabled):not(.link-arrow--selected) {
+    cursor: pointer;
+  }
+
+  .link-arrow:not(.link-arrow--disabled):not(.link-arrow--selected):hover {
+    background: bisque;
+    box-shadow: 0 0 0 1px var(--brown);
+  }
 }
 
 .link-arrow:not(.link-arrow--disabled):active {
@@ -102,6 +110,11 @@ defineProps({
 
 .link-arrow--reverse.link-arrow--disabled {
   transform: rotate(180deg);
+}
+
+.link-arrow--selected {
+  background: var(--lightGrey);
+  box-shadow: 0 0 0 1px transparent;
 }
 
 .link-arrow--big {

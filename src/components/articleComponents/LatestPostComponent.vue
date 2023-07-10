@@ -1,29 +1,18 @@
 <template>
   <section class="post wrapper">
     <h2 class="post__title">Latest Post</h2>
-    <PostComponent :post="latestPost" />
+    <PostComponent :post="getLastArticleShortContent" />
   </section>
 </template>
 
 <script>
 import PostComponent from "@/components/articleComponents/LatestPostContent.vue";
-import { getLastArticle } from "@/api/articles";
+import articlesMixin from "@/mixins/articlesMixin";
 
 export default {
   name: "LatestPostComponent",
+  mixins: [articlesMixin],
   components: { PostComponent },
-  props: {},
-  setup() {
-    const latestPost = getLastArticle();
-    const content = latestPost.content;
-    const paragraphs = content.filter((item) => item.type === "Paragraph");
-    paragraphs.length = 2;
-    latestPost.content = paragraphs;
-
-    return {
-      latestPost,
-    };
-  },
 };
 </script>
 
