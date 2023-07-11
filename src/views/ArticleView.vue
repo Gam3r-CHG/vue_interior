@@ -7,7 +7,7 @@
 
 <script>
 import TopPageComponent from "@/components/TopPageComponent.vue";
-import ArticleInDetail from "@/components/ArticleInDetail.vue";
+import ArticleInDetail from "@/components/articleComponents/ArticleInDetail.vue";
 
 export default {
   name: "ArticleView",

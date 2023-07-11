@@ -8,24 +8,17 @@
     >
       {{ paragraph }}
     </p>
-
-    <div class="project__slider">
-      <img
-        v-for="(image, index) in project.images"
-        :key="index"
-        :src="require('@/' + projectsImageDir + image)"
-        class="project__image"
-      />
-    </div>
   </section>
+  <ProjectSlider :images="project.images" />
 </template>
 
 <script>
 import projectsMixin from "@/mixins/projectsMixin";
-import pathsMixin from "@/mixins/pathsMixin";
+import ProjectSlider from "@/components/projectComponents/ProjectSlider.vue";
 
 export default {
-  mixins: [pathsMixin, projectsMixin],
+  components: { ProjectSlider },
+  mixins: [projectsMixin],
   props: {
     project: {
       type: Object,
@@ -47,9 +40,6 @@ export default {
         require: true,
       },
     },
-  },
-  data() {
-    return {};
   },
 };
 </script>
@@ -91,21 +81,5 @@ export default {
 
 .project__paragraph:last-of-type {
   margin-bottom: 100px;
-}
-
-.project__slider {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 200px;
-  width: 100%;
-}
-
-.project__image {
-  max-width: 1201px;
-  max-height: 799px;
-  min-height: 799px;
-  border-radius: 70px;
-  background: #c4c4c4;
-  object-fit: cover;
 }
 </style>

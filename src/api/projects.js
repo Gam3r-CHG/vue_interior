@@ -133,7 +133,7 @@ const projects = [
     images: ["project_10.webp", "project_2.webp", "project_3.webp"],
     alt: "project image description",
     title: "Modern Bedroom",
-    categories: ["bedroom", "living area"],
+    categories: ["bedroom", "living area", "bathroom"],
     tags: ["decor", "bedroom"],
     url: "#",
     content: [
@@ -601,7 +601,7 @@ const projects = [
     images: ["project_46.webp", "project_40.webp", "project_41.webp"],
     alt: "project image description",
     title: "Modern living area",
-    categories: ["living area"],
+    categories: ["living area", "bedroom"],
     tags: ["decor", "architecture"],
     url: "#",
     content: [
@@ -614,7 +614,7 @@ const projects = [
     images: ["project_47.webp", "project_40.webp", "project_41.webp"],
     alt: "project image description",
     title: "Modern living area",
-    categories: ["living area"],
+    categories: ["living area", "bedroom"],
     tags: ["decor", "architecture"],
     url: "#",
     content: [
@@ -627,7 +627,7 @@ const projects = [
     images: ["project_48.webp", "project_40.webp", "project_41.webp"],
     alt: "project image description",
     title: "Modern living area",
-    categories: ["living area"],
+    categories: ["living area", "bathroom"],
     tags: ["decor", "architecture"],
     url: "#",
     content: [
@@ -667,6 +667,19 @@ const projects = [
     alt: "project image description",
     title: "Modern living area",
     categories: ["living area"],
+    tags: ["decor", "architecture"],
+    url: "#",
+    content: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.",
+      "In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.",
+    ],
+  },
+  {
+    id: 52,
+    images: ["project_13.webp", "project_14.webp", "project_15.webp"],
+    alt: "project image description",
+    title: "Modern Bathroom",
+    categories: ["bathroom"],
     tags: ["decor", "architecture"],
     url: "#",
     content: [

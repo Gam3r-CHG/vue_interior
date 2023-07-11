@@ -7,7 +7,7 @@
 
 <script>
 import TopPageComponent from "@/components/TopPageComponent.vue";
-import SingleProject from "@/components/SingleProject.vue";
+import SingleProject from "@/components/projectComponents/SingleProject.vue";
 import projectsMixin from "@/mixins/projectsMixin";
 
 export default {
@@ -24,7 +24,6 @@ export default {
   created() {
     const routeProjectId = +this.$route.params.projectId;
     if (routeProjectId) {
-      console.log("Project id:", routeProjectId);
       this.projectId = routeProjectId;
     }
   },

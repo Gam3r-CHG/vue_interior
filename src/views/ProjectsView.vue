@@ -7,7 +7,7 @@
 
 <script>
 import TopPageComponent from "@/components/TopPageComponent.vue";
-import ProjectsComponent from "@/components/ProjectsComponent.vue";
+import ProjectsComponent from "@/components/projectComponents/ProjectsComponent.vue";
 import projectsMixin from "@/mixins/projectsMixin";
 
 export default {

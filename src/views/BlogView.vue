@@ -12,7 +12,7 @@
 
 <script>
 import TopPageComponent from "@/components/TopPageComponent.vue";
-import ArticlesComponent from "@/components/ArticlesComponent.vue";
+import ArticlesComponent from "@/components/articleComponents/ArticlesComponent.vue";
 import LatestPostComponent from "@/components/articleComponents/LatestPostComponent.vue";
 
 export default {

@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import SliderComponent from "@/components/SliderComponent.vue";
-import ProjectsComponent from "@/components/Random4Projects.vue";
-import NumbersComponent from "@/components/NumbersComponent.vue";
-import ArticlesComponent from "@/components/ArticlesComponent.vue";
+import SliderComponent from "@/components/mainPage/SliderComponent.vue";
+import ProjectsComponent from "@/components/projectComponents/Random4Projects.vue";
+import NumbersComponent from "@/components/mainPage/NumbersComponent.vue";
+import ArticlesComponent from "@/components/articleComponents/ArticlesComponent.vue";
 
 export default {
   name: "HomeView",
