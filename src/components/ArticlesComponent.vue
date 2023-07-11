@@ -13,7 +13,7 @@
     <PaginationComponent
       v-if="pagination && getCountArticles > articlesPerPage"
       :numberOfPages="countPages"
-      :initialPage="currentPage"
+      :currentPage="currentPage"
       @pageChanged="paginationClickHandler"
     ></PaginationComponent>
   </section>
@@ -71,18 +71,6 @@ export default {
     countPages() {
       return Math.ceil(this.getCountArticles / this.articlesPerPage);
     },
-    getCurrentRoutePage() {
-      const routePageNumber = +this.$route.params.pageNumber;
-      if (isNaN(routePageNumber) || routePageNumber === 0) {
-        return 1;
-      }
-
-      if (routePageNumber > this.countPages) {
-        return this.countPages;
-      }
-
-      return routePageNumber;
-    },
   },
   data() {
     return {
@@ -98,23 +86,10 @@ export default {
       this.currentPage = this.countPages;
       this.$router.push(`/blog/${this.currentPage}`);
     }
-
-    this.$watch(
-      () => this.$route.params.pageNumber,
-      (toParams, previousParams) => {
-        console.log(
-          `Changing route from ${previousParams} to ${this.getCurrentRoutePage}`
-        );
-        this.currentPage = this.getCurrentRoutePage;
-      }
-    );
   },
   methods: {
     paginationClickHandler(selectedPageNumber) {
-      if (selectedPageNumber === 0) {
-        return;
-      }
-
+      this.currentPage = selectedPageNumber;
       this.$router.push(`/blog/${selectedPageNumber}`);
     },
   },

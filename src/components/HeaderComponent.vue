@@ -11,8 +11,8 @@
           >
         </li>
         <li>
-          <router-link to="/project" class="menu__link link link--dark-grey"
-            >Project</router-link
+          <router-link to="/projects" class="menu__link link link--dark-grey"
+            >Projects</router-link
           >
         </li>
         <li>

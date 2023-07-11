@@ -9,12 +9,14 @@ export default {
       "getProjects",
       "getProject",
       "getLastProject",
-      "getProjectsWithTag",
+      "getCountProjectsWithCategory",
+      "getAllProjectsWithCategory",
+      "getProjectsWithCategory",
       "getFourRandomProject",
     ]),
   },
   methods: {
-    ...mapMutations("projects", ["fetchProjectsFromApi"]),
+    ...mapMutations("projects", ["fetchProjectsFromApi", "switchFavourite"]),
   },
   created() {
     if (this.getCountProjects === 0) {

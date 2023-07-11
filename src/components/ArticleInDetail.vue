@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       selectedTag: this.initialTagId,
-      selectedTagName: "Bedroom",
+      selectedTagName: "bedroom",
       isAllShowing: false,
       currentArticleId: 1,
     };

@@ -31,8 +31,8 @@ const articles = [
     imgDescription: "Kitchan Design",
     url: "#",
     date: "2022-12-26",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Kitchen", "Kitchen Planning", "Architecture"],
+    categories: ["interior", "home", "decore"],
+    tags: ["kitchen", "kitchen planning", "architecture"],
     content: [
       {
         type: "Paragraph",
@@ -77,8 +77,8 @@ const articles = [
     imgDescription: "Living Design",
     url: "#",
     date: "2022-12-22",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Kitchen", "Kitchen Planning", "Architecture"],
+    categories: ["interior", "home", "decore"],
+    tags: ["kitchen", "kitchen planning", "architecture"],
     content: [
       {
         type: "Paragraph",
@@ -95,8 +95,8 @@ const articles = [
     imgDescription: "Interior Design",
     url: "#",
     date: "2022-12-25",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Kitchen", "Kitchen Planning", "Architecture"],
+    categories: ["interior", "home", "decore"],
+    tags: ["kitchen", "kitchen planning", "architecture"],
     content: [
       {
         type: "Paragraph",
@@ -122,8 +122,8 @@ const articles = [
     imgDescription: "Kitchan Design",
     url: "#",
     date: "2022-12-26",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Kitchen", "Kitchen Planning", "Architecture"],
+    categories: ["interior", "home", "decore"],
+    tags: ["kitchen", "kitchen planning", "architecture"],
     content: [
       {
         type: "Paragraph",
@@ -145,8 +145,8 @@ const articles = [
     imgDescription: "Kitchan Design",
     url: "#",
     date: "2022-12-26",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Architecture", "Building", "Bedroom"],
+    categories: ["interior", "home", "decore"],
+    tags: ["architecture", "building", "bedroom"],
     content: [
       {
         type: "Paragraph",
@@ -168,8 +168,8 @@ const articles = [
     imgDescription: "Kitchan Design",
     url: "#",
     date: "2022-12-26",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Kitchen", "Kitchen Planning", "Child"],
+    categories: ["interior", "home", "decore"],
+    tags: ["kitchen", "kitchen planning", "child"],
     content: [
       {
         type: "Paragraph",
@@ -217,8 +217,8 @@ const articles = [
     imgDescription: "Kitchan Design",
     url: "#",
     date: "2022-12-26",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Kitchen", "Kitchen Planning", "Bedroom"],
+    categories: ["interior", "home", "decore"],
+    tags: ["kitchen", "kitchen planning", "bedroom"],
     content: [
       {
         type: "Paragraph",
@@ -258,8 +258,8 @@ const articles = [
     imgDescription: "Living Design",
     url: "#",
     date: "2022-12-22",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Bedroom", "Architecture"],
+    categories: ["interior", "home", "decore"],
+    tags: ["bedroom", "architecture"],
     content: [
       {
         type: "Paragraph",
@@ -308,8 +308,8 @@ const articles = [
     imgDescription: "Interior Design",
     url: "#",
     date: "2022-12-25",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Bedroom"],
+    categories: ["interior", "home", "decore"],
+    tags: ["bedroom"],
     content: [
       {
         type: "Paragraph",
@@ -354,8 +354,8 @@ const articles = [
     imgDescription: "Kitchan Design",
     url: "#",
     date: "2022-12-26",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Child"],
+    categories: ["interior", "home", "decore"],
+    tags: ["child"],
     content: [
       {
         type: "Paragraph",
@@ -401,8 +401,8 @@ const articles = [
     imgDescription: "Kitchan Design",
     url: "#",
     date: "2022-12-26",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Architecture"],
+    categories: ["interior", "home", "decore"],
+    tags: ["architecture"],
     content: [
       {
         type: "Paragraph",
@@ -438,8 +438,8 @@ const articles = [
     imgDescription: "Kitchan Design",
     url: "#",
     date: "2022-12-26",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Bedroom"],
+    categories: ["interior", "home", "decore"],
+    tags: ["bedroom"],
     content: [
       {
         type: "Paragraph",
@@ -479,8 +479,8 @@ const articles = [
     imgDescription: "Kitchan Design",
     url: "#",
     date: "2022-12-26",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Kitchen Planning"],
+    categories: ["interior", "home", "decore"],
+    tags: ["kitchen planning"],
     content: [
       {
         type: "Paragraph",
@@ -517,8 +517,8 @@ const articles = [
     imgDescription: "Living Design",
     url: "#",
     date: "2022-12-22",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Child", "Architecture", "Building"],
+    categories: ["interior", "home", "decore"],
+    tags: ["child", "architecture", "building"],
     content: [
       {
         type: "Paragraph",
@@ -563,8 +563,8 @@ const articles = [
     imgDescription: "Kitchan Design",
     url: "#",
     date: "2022-12-26",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Kitchen"],
+    categories: ["interior", "home", "decore"],
+    tags: ["kitchen"],
     content: [
       {
         type: "Paragraph",
@@ -614,8 +614,8 @@ const articles = [
     imgDescription: "Kitchan Design",
     url: "#",
     date: "2022-12-26",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Kitchen", "Architecture"],
+    categories: ["interior", "home", "decore"],
+    tags: ["kitchen", "architecture"],
     content: [
       {
         type: "Paragraph",
@@ -667,8 +667,8 @@ const articles = [
         imgDescription: "Interior Design",
         url: "#",
         date: "2022-12-26",
-        categories: ["Interior", "Home", "Decore"],
-        tags: ["Architecture"],
+        categories: ["interior", "home", "decore"],
+        tags: ["architecture"],
         content: [
           {
             type: "Paragraph",
@@ -697,8 +697,8 @@ const articles = [
     imgDescription: "Interior Design",
     url: "#",
     date: "2022-12-26",
-    categories: ["Interior", "Home", "Decore"],
-    tags: ["Architecture"],
+    categories: ["interior", "home", "decore"],
+    tags: ["architecture"],
     content: [
       {
         type: "Paragraph",

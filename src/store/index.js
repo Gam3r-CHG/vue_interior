@@ -4,7 +4,8 @@ import articles from "@/store/modules/articles";
 import numberBlocks from "@/store/modules/numberBlocks";
 import tags from "@/store/modules/tags";
 import projects from "@/store/modules/projects";
+import categories from "@/store/modules/categories";
 
 export default createStore({
-  modules: { paths, articles, numberBlocks, tags, projects },
+  modules: { paths, articles, numberBlocks, tags, projects, categories },
 });

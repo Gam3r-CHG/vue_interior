@@ -1,16 +1,17 @@
 <template>
   <main class="main">
-    <TopPageComponent image="articles_banner.webp" title="Project" />
+    <TopPageComponent image="all_projects_banner.webp" title="Project" />
     <ProjectsComponent />
   </main>
 </template>
 
 <script>
 import TopPageComponent from "@/components/TopPageComponent.vue";
-import ProjectsComponent from "@/components/Random4Projects.vue";
+import ProjectsComponent from "@/components/ProjectsComponent.vue";
+import projectsMixin from "@/mixins/projectsMixin";
 
 export default {
-  name: "HomeView",
+  mixins: [projectsMixin],
   components: {
     TopPageComponent,
     ProjectsComponent,

@@ -19,8 +19,8 @@
           <router-link to="/" class="menu__link link">Home</router-link>
         </li>
         <li class="menu-item">
-          <router-link to="/project" class="menu__link link"
-            >Project</router-link
+          <router-link to="/projects" class="menu__link link"
+            >Projects</router-link
           >
         </li>
         <li class="menu-item">

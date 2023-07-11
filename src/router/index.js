@@ -8,13 +8,22 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/project",
+    path: "/projects/:category?/:pageNumber(\\d+)?",
+    name: "Projects",
+    // route level code-splitting
+    // this generates a separate chunk (blog.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "blog" */ "@/views/ProjectsView.vue"),
+  },
+  {
+    path: "/project/:projectId(\\d+)?",
     name: "Project",
     // route level code-splitting
     // this generates a separate chunk (blog.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "blog" */ "@/views/ProjectView.vue"),
+      import(/* webpackChunkName: "blog" */ "@/views/SingleProjectView.vue"),
   },
   {
     path: "/blog/:pageNumber(\\d+)?",

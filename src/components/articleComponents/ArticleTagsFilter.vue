@@ -35,12 +35,10 @@ export default {
   },
   methods: {
     tagClicked(clickedTag) {
-      if (this.selectedTag === clickedTag.id) {
-        return;
+      if (this.selectedTag !== clickedTag.id) {
+        this.selectedTag = clickedTag.id;
+        this.$emit("tagSelected", clickedTag);
       }
-
-      this.selectedTag = clickedTag.id;
-      this.$emit("tagSelected", clickedTag);
     },
   },
 };
@@ -82,6 +80,7 @@ export default {
   line-height: 125%;
   letter-spacing: 0.36px;
   box-shadow: unset;
+  text-transform: capitalize;
 }
 .tag__button--selected {
   background-color: #292f36;

@@ -11,7 +11,7 @@
       </li>
       <li v-for="pageNumber in numberOfPages" :key="pageNumber">
         <CircleButton
-          @click.prevent="this.currentPage = pageNumber"
+          @click.prevent="clickHandler(pageNumber)"
           :text="numberFormat(pageNumber)"
           :selected="pageNumber === currentPage"
         ></CircleButton>
@@ -31,7 +31,7 @@
 export default {
   name: "PaginationComponent",
   props: {
-    initialPage: {
+    currentPage: {
       type: Number,
       required: true,
     },
@@ -40,32 +40,26 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      currentPage: this.$props.initialPage,
-    };
-  },
   methods: {
+    clickHandler(pageNumber) {
+      if (this.currentPage !== pageNumber) {
+        this.$emit("pageChanged", pageNumber);
+      }
+    },
     nextPage() {
       if (this.currentPage < this.numberOfPages) {
-        this.currentPage++;
+        this.$emit("pageChanged", this.currentPage + 1);
       }
     },
     prevPage() {
       if (this.currentPage > 1) {
-        this.currentPage--;
+        this.$emit("pageChanged", this.currentPage - 1);
       }
     },
     numberFormat(number) {
       return number.toLocaleString("ru", {
         minimumIntegerDigits: 2,
       });
-    },
-  },
-  watch: {
-    currentPage: function (to, from) {
-      console.log(`Pagination change from ${from} to ${to}`);
-      this.$emit("pageChanged", this.currentPage);
     },
   },
 };

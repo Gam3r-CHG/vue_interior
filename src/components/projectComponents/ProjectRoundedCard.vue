@@ -1,30 +1,33 @@
 <template>
   <div class="project-card">
-    <a class="project-card__image-block" :href="project.url">
+    <router-link
+      :to="`/project/${project.id}`"
+      class="project-card__image-block"
+    >
       <img
         :alt="project.alt"
         class="project-card__image"
-        :src="require('@/' + projectsImageDir + project.image)"
+        :src="require('@/' + projectsImageDir + project.images[0])"
       />
-    </a>
+    </router-link>
     <div class="project-card__footer">
       <div class="project-card__title-block">
-        <a
+        <router-link
           class="project-card__title link link--dark-grey"
-          :href="project.url"
-          >{{ project.title }}</a
+          :to="`/project/${project.id}`"
+          >{{ project.title }}</router-link
         >
         <div class="project_card__tags">
           <a
-            v-for="tag in project.tags"
-            :key="tag.id"
-            :href="tag.url"
+            v-for="(tag, index) in project.tags"
+            :key="index"
+            href="#"
             class="project-card__tag link"
-            >{{ tag.title }}</a
+            >{{ tag }}</a
           >
         </div>
       </div>
-      <CircleButton :link="project.url" size="big" />
+      <CircleButton :link="`/project/${project.id}`" size="big" />
     </div>
   </div>
 </template>
@@ -111,6 +114,7 @@ export default {
 
 .project-card__tag {
   letter-spacing: 0.01em;
+  text-transform: capitalize;
 }
 
 .project-card__tag:not(.project-card__tag:last-of-type)::after {

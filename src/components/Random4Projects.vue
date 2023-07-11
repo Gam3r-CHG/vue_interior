@@ -5,7 +5,7 @@
       <p class="projects__sub-title">{{ text }}</p>
     </div>
     <div class="projects__cards">
-      <ProjectBigCard
+      <ProjectRoundedCard
         v-for="project in getFourRandomProject"
         :key="project.id"
         :project="project"
@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import ProjectBigCard from "@/components/projectComponents/ProjectBigCard.vue";
+import ProjectRoundedCard from "@/components/projectComponents/ProjectRoundedCard.vue";
 import projectsMixin from "@/mixins/projectsMixin";
 
 export default {
-  components: { ProjectBigCard },
+  components: { ProjectRoundedCard },
   mixins: [projectsMixin],
   data() {
     return {

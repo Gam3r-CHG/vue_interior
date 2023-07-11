@@ -5,26 +5,26 @@ export function getAllTags() {
 const tags = [
   {
     id: 1,
-    name: "Kitchen",
+    name: "kitchen",
   },
   {
     id: 2,
-    name: "Bedroom",
+    name: "bedroom",
   },
   {
     id: 3,
-    name: "Building",
+    name: "building",
   },
   {
     id: 4,
-    name: "Architecture",
+    name: "architecture",
   },
   {
     id: 5,
-    name: "Kitchen Planning",
+    name: "kitchen planning",
   },
   {
     id: 6,
-    name: "Child",
+    name: "child",
   },
 ];
