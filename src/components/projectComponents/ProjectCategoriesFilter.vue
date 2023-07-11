@@ -49,6 +49,10 @@ export default {
   display: flex;
   width: max-content;
   margin: 200px auto 61px;
+  position: sticky;
+  top: 16px;
+  background-color: white;
+  z-index: 1;
 }
 .filter__item {
   border-radius: 18px;

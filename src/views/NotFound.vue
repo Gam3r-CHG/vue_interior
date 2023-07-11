@@ -1,7 +1,16 @@
-<script setup></script>
+<script>
+import { defineComponent } from "vue";
+import NotFound from "@/components/NotFound.vue";
+
+export default defineComponent({
+  components: { NotFound },
+});
+</script>
 
 <template>
-  <div>Not found</div>
+  <main>
+    <NotFound />
+  </main>
 </template>
 
 <style scoped></style>

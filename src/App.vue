@@ -6,7 +6,7 @@
       <component :is="Component" />
     </transition>
   </router-view>
-  <FooterComponent />
+  <FooterComponent v-if="this.$route.name !== '404'" />
 </template>
 
 <style src="@/assets/styles/style.css"></style>

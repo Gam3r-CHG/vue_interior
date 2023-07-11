@@ -44,10 +44,14 @@ const routes = [
       import(/* webpackChunkName: "blog" */ "@/views/ArticleView.vue"),
   },
   {
-    path: "/:pathMatch(.*)*",
-    name: "NotFound",
+    path: "/404",
+    name: "404",
     component: () =>
       import(/* webpackChunkName: "blog" */ "@/views/NotFound.vue"),
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: "/404",
   },
 ];
 
