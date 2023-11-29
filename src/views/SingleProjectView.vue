@@ -22,9 +22,15 @@ export default {
     SingleProject,
   },
   created() {
-    const routeProjectId = +this.$route.params.projectId;
+    let routeProjectId = +this.$route.params.projectId;
     if (routeProjectId) {
-      this.projectId = routeProjectId;
+      const projectCount = this.getCountProjects;
+      if (routeProjectId > projectCount) {
+        this.projectId = projectCount;
+        this.$router.push(`/project/${projectCount}`);
+      } else {
+        this.projectId = routeProjectId;
+      }
     }
   },
 };
