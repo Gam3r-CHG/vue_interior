@@ -1,15 +1,19 @@
 <template>
   <div class="post__content">
     <div class="post__image">
-      <img
-        :alt="post.imgAlt"
-        :src="require('@/' + articlesImageDir + post.imgSrc)"
-      />
+      <router-link :to="'/article/' + post.id">
+        <img
+          :alt="post.imgAlt"
+          :src="require('@/' + articlesImageDir + post.imgSrc)"
+        />
+      </router-link>
     </div>
     <div class="post__text-block">
-      <h3 class="post__post-title">
-        {{ post.title }}
-      </h3>
+      <router-link :to="'/article/' + post.id">
+        <h3 class="post__post-title">
+          {{ post.title }}
+        </h3>
+      </router-link>
       <p
         v-for="(paragraph, index) in post.content"
         :key="index"

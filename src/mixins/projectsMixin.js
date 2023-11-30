@@ -12,6 +12,7 @@ export default {
       "getCountProjectsWithCategory",
       "getAllProjectsWithCategory",
       "getProjectsWithCategory",
+      "getRandomProject",
       "getFourRandomProject",
     ]),
   },

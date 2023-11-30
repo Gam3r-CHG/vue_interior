@@ -8,8 +8,12 @@
         It is a long established fact that a reader will be distracted lookings.
       </p>
       <div class="logos__social-links">
-        <a class="social-link" href="#"><i class="icon icon-twitter"></i></a>
-        <a class="social-link" href="#"><i class="icon icon-in"></i></a>
+        <a class="social-link" href="https://twitter.com/?lang=ru"
+          ><i class="icon icon-twitter"></i
+        ></a>
+        <a class="social-link" href="https://ru.linkedin.com/"
+          ><i class="icon icon-in"></i
+        ></a>
       </div>
     </section>
     <section class="pages">

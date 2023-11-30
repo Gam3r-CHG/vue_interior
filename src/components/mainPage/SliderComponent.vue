@@ -9,9 +9,13 @@
       <div class="slider__content">
         <h1 class="slider__title">{{ title }}</h1>
         <p class="slider__text">{{ text }}</p>
-        <button v-if="buttonText" class="slider__button button">
+        <router-link
+          :to="randomProjectLink"
+          v-if="buttonText"
+          class="slider__button button"
+        >
           {{ buttonText }}<i class="icon icon-arrow-right"></i>
-        </button>
+        </router-link>
       </div>
     </div>
   </section>
@@ -19,17 +23,23 @@
 
 <script>
 import pathsMixin from "@/mixins/pathsMixin";
+import projectsMixin from "@/mixins/projectsMixin";
 
 export default {
   name: "SliderComponent",
-  mixins: [pathsMixin],
+  mixins: [pathsMixin, projectsMixin],
+  computed: {
+    randomProjectLink() {
+      const randomProjectId = this.getRandomProject.id;
+      return "/project/" + randomProjectId;
+    },
+  },
   data() {
     return {
       image: "main_banner.webp",
       title: "Let Your Home Be Unique",
       text: "There are many variations of the passages of lorem Ipsum fromavailable, majority.",
       buttonText: "Get Started",
-      buttonLink: "",
     };
   },
 };

@@ -1,4 +1,5 @@
 import { getAllProjects } from "@/api/projects";
+import { getRandomInt } from "@/utils/randomData";
 
 export default {
   namespaced: true,
@@ -46,6 +47,10 @@ export default {
           .slice(offset, offset + amount);
       };
     },
+    getRandomProject(state, getters) {
+      const newRandomIndex = getRandomInt(0, getters.getCountProjects);
+      return state.projects[newRandomIndex];
+    },
     getFourRandomProject(state, getters) {
       const randomIndexes = [];
       const randomProjects = [];
@@ -62,12 +67,6 @@ export default {
 
       function getRandomIndex() {
         return getRandomInt(0, getters.getCountProjects);
-      }
-
-      function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
       }
     },
   },
