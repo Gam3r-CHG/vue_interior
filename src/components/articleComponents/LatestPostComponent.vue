@@ -30,4 +30,15 @@ export default {
   color: #292f36;
   margin-bottom: 27px;
 }
+
+@media screen and (max-width: 768px) {
+  .post {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  .post__title {
+    font-size: 36px;
+  }
+}
 </style>

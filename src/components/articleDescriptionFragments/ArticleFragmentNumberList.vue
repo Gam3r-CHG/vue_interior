@@ -50,4 +50,11 @@ export default {
   letter-spacing: 0.4px;
   margin-right: 14px;
 }
+
+@media screen and (max-width: 768px) {
+  .article__number-list-item {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+}
 </style>

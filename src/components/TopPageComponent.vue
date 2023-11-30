@@ -63,6 +63,7 @@ export default {
   line-height: 125%;
   color: #292f36;
   margin: 0;
+  text-align: center;
 }
 
 .top__breadcrumbs {
@@ -79,5 +80,19 @@ export default {
   margin-left: 8px;
   margin-right: 8px;
   content: "/";
+}
+
+@media screen and (max-width: 768px) {
+  .top {
+    height: 200px;
+  }
+
+  .top__text-block {
+    padding: 20px 36px;
+  }
+
+  .top__title {
+    font-size: 28px;
+  }
 }
 </style>

@@ -67,4 +67,22 @@ export default {
 .filter__item--selected {
   background-color: #cda274;
 }
+
+@media screen and (max-width: 1024px) {
+  .projects__filter {
+    margin: 60px auto 61px;
+  }
+
+  .filter__item {
+    padding: 16px 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects__filter {
+    width: fit-content;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 </style>

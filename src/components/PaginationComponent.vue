@@ -77,4 +77,11 @@ export default {
   font-size: 16px;
   color: #292f36;
 }
+
+@media screen and (max-width: 768px) {
+  .pagination {
+    padding-top: 16px;
+    padding-bottom: 36px;
+  }
+}
 </style>

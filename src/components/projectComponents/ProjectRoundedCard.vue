@@ -122,4 +122,15 @@ export default {
   margin-left: 7px;
   margin-right: 7px;
 }
+
+@media screen and (max-width: 768px) {
+  .project-card__image-block {
+    margin-bottom: 16px;
+    aspect-ratio: 2 / 1;
+  }
+
+  .project-card__title {
+    font-size: 20px;
+  }
+}
 </style>

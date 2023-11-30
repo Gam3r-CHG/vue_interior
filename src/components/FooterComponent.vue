@@ -105,4 +105,28 @@ export default {
   margin-bottom: 30px;
   display: block;
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-bottom: 48px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contacts {
+    margin-top: 32px;
+    margin-left: unset;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .pages {
+    padding-left: unset;
+    margin-top: 32px;
+    margin-left: unset;
+  }
+}
 </style>

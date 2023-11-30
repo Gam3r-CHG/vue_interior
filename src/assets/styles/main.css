@@ -33,6 +33,7 @@ body {
   font-weight: 400;
   font-size: 22px;
   line-height: 150%;
+  overflow-x: hidden;
 }
 
 .main {
@@ -88,6 +89,7 @@ a {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none;
   cursor: pointer;
+  align-items: center;
 }
 
 .button:hover,
@@ -101,6 +103,18 @@ a {
   transform: scale(0.95);
 }
 
+.button--transparent {
+  background-color: transparent;
+  box-shadow: unset;
+}
+
+.button--transparent:hover,
+.button--transparent:focus {
+  background: transparent;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+}
+
 .wrapper {
   max-width: 1232px;
   padding-left: 16px;
@@ -110,4 +124,15 @@ a {
 
 .main-logo {
   display: block;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 16px 24px;
+  }
 }

@@ -115,4 +115,22 @@ export default {
   );
   border-image-slice: 1;
 }
+
+@media screen and (max-width: 768px) {
+  .article {
+    margin-bottom: 36px;
+  }
+
+  .article__title {
+    font-size: 32px;
+  }
+
+  .article__top {
+    padding: 24px 0;
+  }
+
+  .article__categories {
+    flex-direction: column;
+  }
+}
 </style>

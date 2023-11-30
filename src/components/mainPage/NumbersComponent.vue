@@ -76,4 +76,20 @@ export default {
   text-align: center;
   max-width: 140px;
 }
+
+@media screen and (max-width: 768px) {
+  .numbers {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .numbers__blocks {
+    flex-wrap: wrap;
+  }
+
+  .numbers-block {
+    flex-grow: unset;
+    width: 50%;
+  }
+}
 </style>

@@ -63,4 +63,21 @@ export default {
   grid-column-gap: 104px;
   padding-bottom: 96px;
 }
+
+@media screen and (max-width: 768px) {
+  .projects__title-block {
+    padding: 36px 0;
+  }
+
+  .projects__title {
+    font-size: 36px;
+  }
+
+  .projects__cards {
+    grid-template-columns: 1fr;
+    grid-row-gap: 24px;
+    grid-column-gap: 104px;
+    padding-bottom: 36px;
+  }
+}
 </style>

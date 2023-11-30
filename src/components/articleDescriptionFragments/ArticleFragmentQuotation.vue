@@ -41,4 +41,16 @@ export default {
   letter-spacing: 0.5px;
   max-width: 345px;
 }
+
+@media screen and (max-width: 768px) {
+  .article__quotation-block {
+    min-height: 100px;
+    padding: 24px;
+  }
+
+  .article__quotation-text {
+    font-size: 18px;
+    max-width: 200px;
+  }
+}
 </style>

@@ -61,4 +61,18 @@ export default {
   color: #4d5053;
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  .articles__title-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 52px;
+    padding-top: 36px;
+  }
+
+  .articles__title {
+    font-size: 36px;
+  }
+}
 </style>

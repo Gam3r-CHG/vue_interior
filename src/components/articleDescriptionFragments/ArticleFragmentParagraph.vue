@@ -24,4 +24,11 @@ export default {
   letter-spacing: 0.22px;
   margin-bottom: 35px;
 }
+
+@media screen and (max-width: 768px) {
+  .article__paragraph {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+}
 </style>

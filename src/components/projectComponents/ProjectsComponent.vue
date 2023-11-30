@@ -112,4 +112,11 @@ export default {
   columns: 2;
   column-gap: 30px;
 }
+
+@media screen and (max-width: 600px) {
+  .projects__wrapper {
+    columns: 1;
+    column-gap: 30px;
+  }
+}
 </style>

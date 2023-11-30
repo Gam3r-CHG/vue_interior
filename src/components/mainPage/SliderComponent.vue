@@ -73,4 +73,22 @@ export default {
   color: #4d5053;
   margin-bottom: 21px;
 }
+
+@media screen and (max-width: 768px) {
+  .slider__banner {
+    height: 400px;
+  }
+
+  .slider__content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .slider__title {
+    font-size: 36px;
+    line-height: 125%;
+    color: var(--darkGrey);
+    margin-bottom: 18px;
+  }
+}
 </style>

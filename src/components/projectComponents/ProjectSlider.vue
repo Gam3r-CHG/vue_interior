@@ -122,4 +122,16 @@ export default {
 .project__image {
   object-fit: cover;
 }
+
+@media screen and (max-width: 768px) {
+  .project__slider {
+    height: 400px;
+    margin-bottom: 52px;
+  }
+
+  .magnifier {
+    width: 64px;
+    height: 64px;
+  }
+}
 </style>

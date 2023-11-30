@@ -74,4 +74,12 @@ export default {
   margin-top: 200px;
   margin-bottom: 96px;
 }
+
+@media screen and (max-width: 768px) {
+  .article-in-detail {
+    grid-template-columns: 1fr;
+    margin-top: 24px;
+    margin-bottom: 48px;
+  }
+}
 </style>

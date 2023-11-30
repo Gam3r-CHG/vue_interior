@@ -106,4 +106,10 @@ export default {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 27px;
 }
+
+@media screen and (max-width: 768px) {
+  .articles {
+    margin-bottom: 48px;
+  }
+}
 </style>

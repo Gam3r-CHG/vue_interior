@@ -86,4 +86,24 @@ export default {
   background-color: #292f36;
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .tags {
+    order: -1;
+    position: sticky;
+    top: 0;
+    padding: 20px 0;
+    background-color: white;
+  }
+
+  .tags__title {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+
+  .tag__button {
+    padding: 4px 16px;
+    font-size: 14px;
+  }
+}
 </style>

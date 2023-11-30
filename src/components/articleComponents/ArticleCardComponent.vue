@@ -121,4 +121,15 @@ export default {
   align-items: center;
   margin-top: auto;
 }
+
+@media screen and (max-width: 768px) {
+  .article {
+    min-height: 300px;
+  }
+
+  .article__title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}
 </style>

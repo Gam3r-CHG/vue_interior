@@ -24,4 +24,10 @@ export default {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .article__subtitle {
+    font-size: 24px;
+  }
+}
 </style>

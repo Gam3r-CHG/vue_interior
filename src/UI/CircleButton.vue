@@ -121,4 +121,28 @@ defineProps({
   width: 70px;
   height: 70px;
 }
+
+@media screen and (max-width: 1024px) {
+  .link-arrow {
+    width: 48px;
+    height: 48px;
+  }
+
+  .link-arrow--big {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .link-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .link-arrow--big {
+    width: 36px;
+    height: 36px;
+  }
+}
 </style>

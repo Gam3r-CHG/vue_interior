@@ -54,6 +54,7 @@ export default {
 
 .project__title {
   max-width: 565px;
+  text-align: center;
   color: #292f36;
   font-family: "DM Serif Display", serif;
   font-size: 50px;
@@ -81,5 +82,28 @@ export default {
 
 .project__paragraph:last-of-type {
   margin-bottom: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    margin-top: 36px;
+  }
+
+  .project__title {
+    max-width: 300px;
+    font-size: 36px;
+  }
+
+  .project__paragraph {
+    font-size: 16px;
+  }
+
+  .project__paragraph:not(.project__paragraph:last-of-type) {
+    margin-bottom: 24px;
+  }
+
+  .project__paragraph:last-of-type {
+    margin-bottom: 36px;
+  }
 }
 </style>

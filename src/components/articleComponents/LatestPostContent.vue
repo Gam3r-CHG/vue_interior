@@ -118,4 +118,31 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
+
+@media screen and (max-width: 768px) {
+  .post__content {
+    min-height: 522px;
+    padding: 22px;
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid #e7e7e7;
+    filter: drop-shadow(0px 10px 30px rgba(255, 255, 255, 0.25));
+    border-radius: 62px;
+  }
+
+  .post__text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .post__text {
+    margin-bottom: 20px;
+  }
+
+  .post__text:last-of-type {
+    margin-bottom: 32px;
+  }
+}
 </style>
