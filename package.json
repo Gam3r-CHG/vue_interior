@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "fix404": "cd dist && copy index.html 404.html",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "core-js": "^3.8.3",
